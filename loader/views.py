@@ -3,6 +3,9 @@ import logging
 from flask import Blueprint, render_template, request
 from loader.utils import save_picture
 
+from app import loader_blueprint
+
+
 loader_blueprint = Blueprint('loader_blueprint', __name__,template_folder='templates')
 
 """Загружаем страницу добавления поста"""
