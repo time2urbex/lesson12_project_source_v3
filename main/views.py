@@ -2,18 +2,27 @@ import logging
 
 from flask import Blueprint, render_template, request
 
-main_blueprint = Blueprint('main_blueprint' __name__, template_folder='templates')
+main_blueprint = Blueprint('main_blueprint', __name__, template_folder='templates')
+
+# Создаем роут главной страницы
 
 @main_blueprint.route('/')
 def main_page():
     return render_template('index.html')
 
+# Создаем роут страницы для поиска
+
+
 @main_blueprint.route('/search/')
 def search_page():
     search_query = request.args.get('s', '')
     logging.info('Выполняю поиск')
+
+    # Делаем проверку на наличие и работоспособность файла
+
     try:
         posts = get_posts_by_word(search_query)
+
     except FileNotFoundError:
         return 'Файл не найден'
 
