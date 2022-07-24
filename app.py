@@ -2,7 +2,7 @@ import logging
 
 from flask import Flask, request, render_template, send_from_directory
 from functions import load_posts, get_posts_by_word, add_post
-from main.views import main_blueprint
+from loader.views import loader_blueprint
 
 """ Указываем расположение словаря с данными и папки с изображениями"""
 POST_PATH = "posts.json"
