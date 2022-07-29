@@ -1,13 +1,13 @@
 import json
 
-"""Загружаем посты из json"""
+# Загружаем посты из json
 
 def load_posts() -> list[dict]:
     with open('posts.json', 'r', encoding='utf-8') as file:
         return json.load(file)
 
 
-"""Поиск - в этой функции мы делаем перебор по значению """
+# Поиск - в этой функции мы делаем перебор по значению
 
 
 def get_posts_by_word(word:str) -> list[dict]:
@@ -17,7 +17,7 @@ def get_posts_by_word(word:str) -> list[dict]:
             result.append(post)
     return result
 
-""" Функция добавления поста"""
+# Функция добавления поста
 
 
 def add_post(post: dict) -> dict:

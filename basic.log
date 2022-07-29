@@ -1,0 +1,25 @@
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:1000 (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:1000 (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:1234 (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2022 18:34:35] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2022 18:34:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /list [GET]
+Traceback (most recent call last):
+  File "E:\! “–≈Õ»Õ√» !\! PYTHON SKYPRO !\lesson12_project_source_v3\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\! “–≈Õ»Õ√» !\! PYTHON SKYPRO !\lesson12_project_source_v3\venv\lib\site-packages\flask\app.py", line 1520, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "E:\! “–≈Õ»Õ√» !\! PYTHON SKYPRO !\lesson12_project_source_v3\venv\lib\site-packages\flask\app.py", line 1539, in finalize_request
+    response = self.make_response(rv)
+  File "E:\! “–≈Õ»Õ√» !\! PYTHON SKYPRO !\lesson12_project_source_v3\venv\lib\site-packages\flask\app.py", line 1695, in make_response
+    raise TypeError(
+TypeError: The view function for 'page_tag' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2022 18:34:53] "[35m[1mGET /list HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:1234 (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:1234 (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:1234 (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:1234 (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:1234 (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:1234 (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:1234 (Press CTRL+C to quit)
