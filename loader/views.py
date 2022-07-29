@@ -6,16 +6,16 @@ from loader.utils import save_picture
 from app import loader_blueprint
 
 
-loader_blueprint = Blueprint('loader_blueprint', __name__,template_folder='templates')
+loader_blueprint = Blueprint('loader_blueprint', __name__, template_folder='templates')
 
-"""Загружаем страницу добавления поста"""
+# Загружаем страницу добавления поста
 
 @loader_blueprint.route('/post')
 def post_page():
     return render_template('post_form.html')
 
 
-"""Присваеваем загруженному посту данные и передаем их в  переменные """
+# Присваеваем загруженному посту данные и передаем их в  переменные
 
 
 @loader_blueprint.route('/post', methods=['POST'])
@@ -23,7 +23,7 @@ def add_post_page():
     picture = request.files.get('picture')
     content = request.form.get('content')
 
-""" Делаем различные проверки """
+# Делаем различные проверки
 
     if not picture or not content:
         return 'Нет картинки или текста'
@@ -40,8 +40,8 @@ def add_post_page():
     except JSONDecoderError:
         return 'Невалидный файл'
 
-""" Возвращаем данные в виде html"""
+# Возвращаем данные в виде html
 
 
     post: dict = add_post({'pic': picture_path, 'content': content})
-    return render_template('post_uploaded.html' post=post)
+    return render_template('post_uploaded.html', post=post)
