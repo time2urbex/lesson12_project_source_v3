@@ -1,8 +1,8 @@
 import logging
-
+import json
 from flask import Blueprint, render_template, request
 from loader.utils import save_picture
-
+from functions import load_posts, get_posts_by_word, add_post
 
 
 loader_blueprint = Blueprint('loader_blueprint', __name__, template_folder='templates')
