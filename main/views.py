@@ -1,6 +1,7 @@
 import logging
-
+import json
 from flask import Blueprint, render_template, request
+from functions import load_posts, get_posts_by_word, add_post
 
 
 
